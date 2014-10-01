@@ -1,0 +1,19 @@
+{
+  "name": "weather_channel",
+  "version": "0.0.1",
+  "description": "Server which pulls weater data and stores it in a db",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhilippeRoy/weather_channel.git"
+  },
+  "author": "Philippe Roy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PhilippeRoy/weather_channel/issues"
+  },
+  "homepage": "https://github.com/PhilippeRoy/weather_channel"
+}
