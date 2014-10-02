@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/PhilippeRoy/weather_channel/issues"
   },
-  "homepage": "https://github.com/PhilippeRoy/weather_channel"
+  "homepage": "https://github.com/PhilippeRoy/weather_channel",
+  "dependencies": {
+    "mongodb": "^1.4.17"
+  }
 }
