@@ -10,7 +10,6 @@ function addWeatherData(data) {
 		var cursor = db.collection('melbourneWeatherData');
 
 		cursor.count(function (err, count) {
-			//console.log(count);
 
 			if (count > 5) {
 				// deletes the oldest item (document) if the collection is larger than 5
@@ -21,12 +20,11 @@ function addWeatherData(data) {
 			}
 		})
 
-
 		// insert weather data
-		// cursor.insert(data, function (err, result) {
-		// 	if (err) throw err;
-		// 	db.close();
-		// });
+		cursor.insert(data, function (err, result) {
+			if (err) throw err;
+			db.close();
+		});
 	});
 }
 
@@ -39,12 +37,10 @@ http.get(URL, function (res) {
 	});
 	
 	res.on('end', function () {
-		// turn data into JSON to store into db
-		// var json = JSON.parse(body);
-		// addWeatherData(json);
-		console.log(body);
+		//turn data into JSON to store into db
+		var json = JSON.parse(body);
+		addWeatherData(json);
 	})
 });
 
 
-//addWeatherData({test:true});
